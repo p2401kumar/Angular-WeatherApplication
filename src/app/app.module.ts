@@ -11,6 +11,7 @@ import { StateInputComponent } from './search-area/state-input/state-input.compo
 import { AutoDetectInputComponent } from './search-area/auto-detect-input/auto-detect-input.component';
 import { FormSubmitButtonComponent } from './search-area/form-submit-button/form-submit-button.component';
 import { ResultAreaComponent } from './result-area/result-area.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { ResultAreaComponent } from './result-area/result-area.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

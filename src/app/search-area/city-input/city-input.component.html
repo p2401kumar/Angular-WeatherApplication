@@ -1,9 +1,10 @@
 <div class="form-group row justify-content-center">
-  <label for="inputCity" class="col-sm-2 col-form-label text-left">
+  <label class="col-sm-2 col-form-label text-left">
     City
     <span style="color: red">*</span>
   </label>
   <div class="col-sm-6">
-    <input type="password" class="form-control" id="inputCity">
+<!--    <input type="search" class="form-control" id="inputCity">-->
+    <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search"/>
   </div>
 </div>

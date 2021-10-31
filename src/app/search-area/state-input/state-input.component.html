@@ -1,8 +1,11 @@
 <div class="form-group row justify-content-center">
-  <label for="inputState" class="col-sm-2 col-form-label text-left">
+  <label class="col-sm-2 col-form-label text-left">
     State
   </label>
   <div class="col-sm-6">
-    <input type="password" class="form-control" id="inputState">
+    <select class="form-select w-50" aria-label="Default select example">
+      <option>Select your State</option>
+      <option *ngFor="let s of states">{{s}}</option>
+    </select>
   </div>
 </div>
