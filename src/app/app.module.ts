@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchAreaComponent } from './search-area/search-area.component';
-import { StreetInputComponent } from './street-input/street-input.component';
-import { CityInputComponent } from './city-input/city-input.component';
-import { StateInputComponent } from './state-input/state-input.component';
-import { AutoDetectInputComponent } from './auto-detect-input/auto-detect-input.component';
+import { StreetInputComponent } from './search-area/street-input/street-input.component';
+import { CityInputComponent } from './search-area/city-input/city-input.component';
+import { StateInputComponent } from './search-area/state-input/state-input.component';
+import { AutoDetectInputComponent } from './search-area/auto-detect-input/auto-detect-input.component';
+import { FormSubmitButtonComponent } from './search-area/form-submit-button/form-submit-button.component';
+import { ResultAreaComponent } from './result-area/result-area.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { AutoDetectInputComponent } from './auto-detect-input/auto-detect-input.
     StreetInputComponent,
     CityInputComponent,
     StateInputComponent,
-    AutoDetectInputComponent
+    AutoDetectInputComponent,
+    FormSubmitButtonComponent,
+    ResultAreaComponent
   ],
   imports: [
     BrowserModule,
