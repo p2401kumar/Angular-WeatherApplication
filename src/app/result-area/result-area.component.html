@@ -1,19 +1,62 @@
 <div class="container">
-  <div class="col-sm-12 text-center">
-    <button id="result-button" type="button" class="btn btn-lg btn-primary">Result</button>
+  <div class="col-sm-12 text-center" *ngIf="showResultPage">
+    <button type="button" class="btn btn-lg btn-primary">Result</button>
        
-    <button id="favour-button" type="button" class="btn btn-lg btn-light">Favourite</button>
+    <button type="button" class="btn btn-lg btn-light" (click)="setResultPage(false)">Favourite</button>
   </div>
-
-  <div class="col-sm-12 text-center mt-5" *ngIf="res_resultAvailable">
-    <span class="h3">
-      <strong>Forecast at {{res_city}}, {{res_state}}</strong>
-    </span>
+  <div class="col-sm-12 text-center" *ngIf="!showResultPage">
+    <button type="button" class="btn btn-lg btn-light" (click)="setResultPage(true)">Result</button>
+       
+    <button type="button" class="btn btn-lg btn-primary">Favourite</button>
   </div>
-
 
   <div class="progress col-sm-12 mt-5" *ngIf="res_queryAvailable">
-    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemax="100" style="width: 50%"></div>
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50"
+         aria-valuemax="100" style="width: 50%"></div>
   </div>
+
+  <div class="mt-5 alert alert-warning" role="alert" *ngIf="!showResultPage && favorites === ''">
+    Sorry, No Record Found
+  </div>
+
+  <table class="table mt-5" *ngIf="!showResultPage && favorites !== ''">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">City</th>
+      <th scope="col">State</th>
+      <th scope="col"> </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!--  <div class="col-sm-12 mt-5 text-center" [hidden]="!res_resultAvailable || !showResultPage" >-->
+  <!--    Hello-->
+  <!--  </div>-->
+
+  <!--  <div class="col-sm-12 mt-5 text-center" [hidden]="!res_resultAvailable || showResultPage" >-->
+  <!--    Bye-->
+  <!--  </div>-->
+
 
 </div>

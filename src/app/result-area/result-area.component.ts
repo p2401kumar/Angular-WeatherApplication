@@ -21,9 +21,17 @@ export class ResultAreaComponent implements OnInit {
   @Input()
   res_weather_15_day: any | undefined
 
-  constructor() { }
+  showResultPage = true;
+  favorites: string | undefined;
+
+  constructor() {
+    this.favorites = ''
+  }
 
   ngOnInit(): void {
   }
 
+  setResultPage(b: boolean) {
+    this.showResultPage = b;
+  }
 }
