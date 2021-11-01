@@ -30,8 +30,4 @@ export class ResultAreaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  setResultPage(b: boolean) {
-    this.showResultPage = b;
-  }
 }

@@ -8,12 +8,14 @@ import { SearchAreaComponent } from './search-area/search-area.component';
 import { ResultAreaComponent } from './result-area/result-area.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
+import { CarouselAreaComponent } from './carousel-area/carousel-area.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchAreaComponent,
-    ResultAreaComponent
+    ResultAreaComponent,
+    CarouselAreaComponent
   ],
   imports: [
     BrowserModule,

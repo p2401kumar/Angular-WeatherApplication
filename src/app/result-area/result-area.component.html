@@ -2,10 +2,10 @@
   <div class="col-sm-12 text-center" *ngIf="showResultPage">
     <button type="button" class="btn btn-lg btn-primary">Result</button>
        
-    <button type="button" class="btn btn-lg btn-light" (click)="setResultPage(false)">Favourite</button>
+    <button type="button" class="btn btn-lg btn-light" (click)="showResultPage = false">Favourite</button>
   </div>
   <div class="col-sm-12 text-center" *ngIf="!showResultPage">
-    <button type="button" class="btn btn-lg btn-light" (click)="setResultPage(true)">Result</button>
+    <button type="button" class="btn btn-lg btn-light" (click)="showResultPage = true">Result</button>
        
     <button type="button" class="btn btn-lg btn-primary">Favourite</button>
   </div>
@@ -18,6 +18,8 @@
   <div class="mt-5 alert alert-warning" role="alert" *ngIf="!showResultPage && favorites === ''">
     Sorry, No Record Found
   </div>
+
+  <app-carousel-area *ngIf="res_resultAvailable && showResultPage"></app-carousel-area>
 
   <table class="table mt-5" *ngIf="!showResultPage && favorites !== ''">
     <thead>
