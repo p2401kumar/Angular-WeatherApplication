@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-result-area',
@@ -6,6 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./result-area.component.scss']
 })
 export class ResultAreaComponent implements OnInit {
+  @Input()
+  res_city: string | undefined
+
+  @Input()
+  res_state: string | undefined
+
+  @Input()
+  res_queryAvailable: Boolean | undefined
+
+  @Input()
+  res_resultAvailable: Boolean | undefined
+
+  @Input()
+  res_weather_15_day: any | undefined
 
   constructor() { }
 

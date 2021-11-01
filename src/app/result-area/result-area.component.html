@@ -1,1 +1,19 @@
-<p>result-area works!</p>
+<div class="container">
+  <div class="col-sm-12 text-center">
+    <button id="result-button" type="button" class="btn btn-lg btn-primary">Result</button>
+       
+    <button id="favour-button" type="button" class="btn btn-lg btn-light">Favourite</button>
+  </div>
+
+  <div class="col-sm-12 text-center mt-5" *ngIf="res_resultAvailable">
+    <span class="h3">
+      <strong>Forecast at {{res_city}}, {{res_state}}</strong>
+    </span>
+  </div>
+
+
+  <div class="progress col-sm-12 mt-5" *ngIf="res_queryAvailable">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemax="100" style="width: 50%"></div>
+  </div>
+
+</div>
