@@ -1,0 +1,23 @@
+<div class="col">
+  <!--  <div class="text-right">-->
+
+  <div class="row text-right">
+    <div>
+      <button type="button" class="btn btn-default" *ngIf="!markFavourite" (click)="markFavourite = !markFavourite">
+        <span class="glyphicon glyphicon-star icon-large"></span>
+      </button>
+
+      <button type="button" class="btn btn-default justify-content-center" *ngIf="markFavourite"  (click)="markFavourite = !markFavourite">
+        <span class="glyphicon glyphicon-star icon-large" style="color: yellow"></span>
+      </button>
+       
+      Details
+
+      <span class="glyphicon glyphicon-menu-right icon-large" style="color: gray"></span>
+    </div>
+  </div>
+
+  <div>
+
+  </div>
+</div>

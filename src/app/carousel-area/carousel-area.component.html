@@ -1,1 +1,8 @@
-<p>carousel-area works!</p>
+<button type="button" (click)="onPrevious()" [disabled]="counter===0">Previous</button>
+<button type="button" (click)="onNext()" [disabled]="this.counter == 1">Next</button>
+<div [@animImageSlider]="counter" class="col-sm-12 mt-5 text-center">
+  <ng-container>
+    <app-weekly-area *ngIf="counter == 0"></app-weekly-area>
+    <app-details-area *ngIf="counter == 1"></app-details-area>
+  </ng-container>
+</div>

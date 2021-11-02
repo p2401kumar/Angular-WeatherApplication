@@ -19,7 +19,8 @@
     Sorry, No Record Found
   </div>
 
-  <app-carousel-area *ngIf="res_resultAvailable && showResultPage"></app-carousel-area>
+<!--  <app-carousel-area *ngIf="res_resultAvailable && showResultPage"></app-carousel-area>-->
+  <app-carousel-area *ngIf="showResultPage"></app-carousel-area>
 
   <table class="table mt-5" *ngIf="!showResultPage && favorites !== ''">
     <thead>
